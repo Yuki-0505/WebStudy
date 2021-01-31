@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 点击 -->
+    <a href="javascript:;" onclick="func()">click</a>
+    <!-- 移入 -->
+    <a href="javascript:;" onmousemove="func1()">func1</a>
+    <script>
+        function func(){
+            alert('click');
+        }
+        function func1(){
+            alert('func1');
+        }
+
+        // 延时器
+        var o=setTimeout(function(){
+            alert("Timeout");
+        }, 1000)
+        // 清除延时器
+        clearTimeout(o);
+
+        // 定时器
+        o=setInterval(function(){
+            console.log(2);
+        },1000)
+        // 清除定时器
+        clearInterval(o);
+
+    </script>
+</body>
+</html>

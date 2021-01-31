@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播例子</title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;list-style: none;
+			}
+			.container{
+				position: relative;
+			    max-width: 700px;
+			    max-height: 300px;
+			    margin: 0 auto;
+			}
+			.container .carousel{
+				max-width: 100%;
+				max-height: 100%;
+			    position: relative;
+			    margin: 0 auto;
+			}
+			.container .carousel li{
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 80px auto;
+				transition: all .6s, z-index .2s;
+			}
+			.container .carousel li.left{
+				transform: translateX(-60%) scale(.8);
+			}
+			.container .carousel li.center{
+				z-index: 99;
+			}
+			.container .carousel li.right{
+				transform: translateX(60%) scale(.8);
+			}
+			.container .carousel li.unset{
+				transform: translateX(0%) scale(0.8);
+			}
+		</style>
+	</head>
+	<body>
+			<div class="container">
+				<div class="carousel" >
+					<li><img src="https://placehold.it/700x300?text=1"/></li>
+					<li><img src="https://placehold.it/700x300?text=2"/></li>
+					<li><img src="https://placehold.it/700x300?text=3"/></li>
+					<li><img src="https://placehold.it/700x300?text=4"/></li>
+					<li><img src="https://placehold.it/700x300?text=5"/></li>
+				</div>
+			</div>
+<script type="text/javascript">
+	(function(){
+	myCarousel = function (){
+		var carousel = {
+	      containerCarousel: document.querySelector('.container .carousel'),
+	      listCarousel: document.querySelectorAll('.container .carousel li'),
+		  rightIndex:3,//默认right所在位置,从1开始编号
+		  timer:null //定时器对象
+		};
+		function move() {
+		      var left = document.querySelector('.left');
+		      var center = document.querySelector('.center');
+		      var right = document.querySelector('.right');
+		      var nextRight=document.querySelector("li:nth-child("+(carousel.rightIndex+1)+")");
+		     //重新更新class值
+		     left.className='unset';
+		     center.className="left";
+		     right.className='center';
+		     nextRight.className='right';
+		     carousel.rightIndex++;
+		     if(carousel.rightIndex===carousel.listCarousel.length){
+		     	//不设置0，则第一张图会缺失。
+		     	 carousel.rightIndex=0;//必须设置为0，nth-child(carousel.rightIndex+1)
+		     }
+		}
+		function buildCarousel() {
+			//最少2张图进行轮播
+		      if (carousel.listCarousel.length > 2) {
+		        for (var i = 2;i<carousel.listCarousel.length;i++) {
+		          	carousel.listCarousel[0].className = 'left';
+		        	carousel.listCarousel[1].className = 'center';
+		        	carousel.listCarousel[2].className = 'right';
+		        	carousel.listCarousel[i].className='unset';
+		        }
+		      }
+		}
+		function cancel(){
+			carousel.listCarousel.forEach(function(o,i){
+				o.onmouseover=function(){
+					//注意，不能直接写timer,否则无法清除定时器
+					clearInterval(carousel.timer);
+				}
+				o.onmouseout=function(){
+					carousel.timer=setInterval(move, 2000);
+				}
+			});
+		}
+	    function start() {
+	      buildCarousel();
+	      cancel();
+	      carousel.timer=setInterval(move, 2000);
+	    }
+	    start();
+	};
+	myCarousel();
+})();
+</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+
+    <script type="text/javascript" charset="utf-8">
+    var box=document.querySelectorAll(".box");
+    console.log(box);
+    // for(i in box){
+    //     (function(i){
+    //         box[i].onclick=function(){
+    //             console.log(box[i],i);
+    //         }
+    //     })(i);
+    // }
+    box.forEach(function(item,index){
+        item.onclick=function(){
+            console.log(item,index);
+        }
+    })
+    </script>
+</body>
+</html>

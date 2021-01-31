@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=new Array();
+        var x1=new Array(3);
+        var x2=new Array(1,2,3,4);
+        var x3=[1,2,3,4];s
+
+        x[0]=1;
+        x[3]='s';
+
+        typeof x1;
+        // object
+
+        x1.constructor==Array;
+        // true
+
+        x1.length;
+
+
+        // concat,连接字符串，原来的数组不受影响
+        var a=[1,2,3];
+        var b=a.concat(1,2);
+        // a=[1,2,3],b=[1,2,3,1,2]
+
+        // join用指定字符连接数组成字符串
+        b=a.join('||');
+        // a=[1,2,3],b="1||2||3"
+
+        // split分割字符串
+        "1,2,3".split(',');
+        // [1,2,3]
+
+        // push末尾添加
+        b=[1,2,3];
+        b.push(1,2);
+        // b=[1,2,3,1,2]
+        b.push(1,[1,2]);
+        // b=[1,2,3,1,2,1,Array(2)]
+
+        // pop返回并删除末尾的一个元素
+        b.pop();
+        // [1,2]
+
+        // shift返回并删除头部的一个元素
+        b.shift();
+        // 1
+
+        // reverse颠倒数组
+        b=a.reverse();
+        // a.[3,2,1],b=[3,2,1]
+
+        // slice切片,不影响原数组，包括头不包括尾
+        a=[1,2,3,4,5,6];
+        b=a.slice(2,4);
+        // a=[1,2,3,4,5,6],b=[3,4];
+        b=a.slice(-3,-1);
+        // b=[4,5]
+
+        // sort排序,改变原数组
+        a=[1,32,6,8,41];
+        b=a.sort();
+        // b=[1,32,41,6,8]
+        // 自增排序
+        a.sort(function(a,b){
+            return a-b;
+        });
+        // 自减排序
+        a.sort((a,b)=>b-a);
+
+        // splice删除从角标开始的指定个元素，并添加元素
+        a=[1,2,3,4,5,6];
+        b=a.splice(1,2,88,99);
+        // a=[1,88,99,4,5,6],b=[2,3];
+
+    </script>
+</body>
+</html>

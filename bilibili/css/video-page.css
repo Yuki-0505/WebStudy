@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+hr {
+    margin-left: 80px;
+}
+
+.video {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.video-info .video-data {
+    margin: 10px;
+
+}
+
+.video-info .video-data span {
+    color: #757575;
+}
+
+.video-info .video-up {
+    position: relative;
+    left: 300px;
+}
+.video-info .video-up div {
+    margin: 10px;
+}
+
+.video-info div[class|="info"] {
+    display: inline-block;
+}
+
+.video-info .video-up div[class|="up"] {
+    display: inline-block;
+}
+
+.video-info .video-up .up-image {
+    position: relative;
+    top: 10px;
+}
+
+.video-info .video-up .up-image a img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 13px solid white;
+}
+
+.video-info .video-up .up-info .name {
+    color:  #FB7299;
+    font-size: 18px;
+}
+.video-info .video-up .up-info .desc {
+    color: #757575;
+    font-size: 13px;
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.player {
+    margin-left: 80px;
+}
+
+.introduction .introduction-content {
+    white-space: pre-line;
+    color: #757575;
+}
+
+.introduction .introduction-content a {
+    color: #00b5e5;
+}
+
+.comment .comment-push div[class|="comment"] {
+    display: inline-block;
+}
+
+.comment .comment-push .comment-submit {
+    position: relative;
+    top: -50px;
+    left: 10px;
+}
+
+.comment .comment-push .comment-box textarea {
+    margin-left: 160px;
+    resize: none;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+.comment .comment-push .comment-submit input {
+    width: 100px;
+    height: 114px;
+    font-size: 16px;
+}
+
+.comment .comment-push .comment-submit:hover input {
+    color: #00b5e5;
+}
+
+.comment .comment-list {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.comment .comment-list .user-face {
+    position: absolute;
+}
+.comment .comment-list .user-face a img {
+    border-radius: 50%;
+    border: 13px solid white;
+    width: 52px;
+    height: 52px;
+}
+
+.comment .comment-list .user-comment {
+    position: relative;
+    left: 80px;
+}
+.comment .comment-list .user-comment div {
+    margin: 5px;
+    margin-left: 10px;
+}
+.comment .comment-list .user-comment .user-name a {
+    color: #fb7299;
+}
+.comment .comment-list .user-comment .comment-time {
+    color:  #757575;
+    font-size: 12px;
+}
+
+.comment .comment-list div[class|="user"] {
+    display: inline-block;
+}
+
+.comment .comment-list .page-list {
+    margin: 30px;
+}
+
+.comment .comment-list .page-list a {
+    margin-left: 15px;
+}
+.comment .comment-list .page-list div {
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-block;
+    border: 1px solid #757575;
+    border-radius: 10%;
+    text-align: center;
+    line-height: 40px;
+}
+.comment .comment-list .page-list a:nth-child(1) div {
+    background-color: #00b5e5;
+}
+
+.comment .comment-list .page-list div:hover {
+    background-color: #00b5e5;
+}
+
+.comment .comment-list .page-list a div {
+    color: black;
+}

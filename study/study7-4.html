@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 原始方法
+        var obj=new Object();
+        obj.name="json ";
+        obj.showInfo=function(){
+            document.write("name=",this.name);
+        }
+
+        obj.showInfo();
+
+        // 构造函数创建对象
+        function Person(name,age){
+            this.name=name||'json';
+            this.age=age||178;
+            this.getName=function(){
+                console.log('name=',this.name);
+            }
+            this.getAge=function(){
+                console.log('age=',this.age);
+            }
+        }
+        var person=new Person('json', 18);
+        person.getName();
+        person.getAge();
+
+        // 原型方法
+        function Student(){
+
+        }
+        Student.prototype.name="json";
+        Student.prototype.getName=function(){
+            return this.name;
+        }
+
+        var stu=new Student();
+        console.log('name=',stu.getName());
+
+        // json方式
+        var goods={
+            price:10.1,
+            sal:!0,
+            showInfo:function(){
+                console.log('price=',this.price,'sal=',this.sal);;
+            }
+        }
+        goods.showInfo();
+
+    </script>
+</body>
+</html>

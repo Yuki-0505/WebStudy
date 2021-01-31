@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 去除点 */
+        ul li {
+            list-style: none;
+        }
+        /* 去除下划线 */
+        ul li a {
+            text-decoration:none;
+        }
+        /* 奇数行变红 */
+        /* ul li:nth-child(odd) a {
+            color: red;
+        } */
+        /* 偶数行变灰 */
+        /* ul li:nth-child(even) a {
+            color: gray;
+        } */
+        /* 第一个和最后一个变绿 */
+        /* ul li:nth-child(1) a, ul li:nth-child(5) a {
+            color: green;
+        } */
+        /* ul li:first-child a, ul li:last-child a {
+            color: green;
+        } */
+        /* 第2到4变绿 */
+        ul li:nth-child(n+2):nth-child(-n+4) a {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="javasript:;">内容1</a></li>
+        <li><a href="javasript:;">内容2</a></li>
+        <li><a href="javasript:;">内容3</a></li>
+        <li><a href="javasript:;">内容4</a></li>
+        <li><a href="javasript:;">内容5</a></li>
+    </ul>
+</body>
+</html>

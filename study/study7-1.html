@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s1='12';
+        var s2=String('12');
+        var s3=new String('12');
+        typeof s1;//string;基本类型，无方法
+        typeof s2;//string;基本类型，无方法
+        typeof s3;//object;对象，有方法
+
+        typeof '';//string
+        typeof String;//function
+        typeof String();//string
+        typeof new String;//object
+        typeof new String();//object
+
+        // 使用==比较时，string类型仅比较值，object需要比较引用
+        // new 创建的对象一直存在，string类型在代码执行后立即销毁
+
+        var a=[1,2,3,4,5];
+        Array.prototype.sum=function() {
+            var sum=0;
+            // for(i in arguments){
+            //     sum+=arguments[i];
+            // }
+            let o=this;
+            for(var i=0;i<o.length;i++){
+                sum+=o[i];
+            }
+            return sum;
+        }
+        console.log(a.sum());
+    </script>
+</body>
+</html>

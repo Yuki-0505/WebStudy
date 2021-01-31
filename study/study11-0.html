@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script>
+        // 页面加载完成后获取
+        window.onload=function(){
+            console.log(document.querySelector('.box').innerHTML);
+        }
+
+        $(document).ready(function(){
+            console.log($('.box').html(),"jquery1");
+        });
+        $().ready(function(){
+            console.log($('.box').html(),"jquery2");
+        });
+        $(function(){
+            console.log($('.box').html(),"jquery3");
+        });
+    </script>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <script type="text/javascript">
+        console.log(document.querySelector('.box').innerHTML);
+        console.log($('.box').html());
+        // DOM->jquery
+        var box=document.querySelectorAll('.box');
+        console.log('DOM:',box);
+        var $box=$(box);
+        console.log('DOM->jquery:',$box);
+        // jquery->DOM
+        console.log('jquery->DOM:',$box[0]);
+        console.log('jquery->DOM:',$box.get(1));
+
+    </script>
+
+</body>
+</html>

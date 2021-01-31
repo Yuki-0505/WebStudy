@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 前缀选择器,第一个值的前缀为se */
+        div[name^="se"] {
+            color: red;
+        }
+        /* 后缀选择器，最后一个值的后缀为k */
+        div[name$="k"] {
+            color: blue;
+        }
+        /* 子串选择器 */
+        div[name*="lk"] {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div name="seasdf">内容</div>
+    <div name="name seasdf">内容</div>
+
+    <div name="namek">内容</div>
+    <div name="sadfa namek">内容</div>
+    <div name="sadfa namek asdfsa">内容</div>
+
+    <div name="aslksa">内容</div>
+    <div name="aslksa sdfs">内容</div>
+</body>
+</html>

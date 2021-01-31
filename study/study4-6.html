@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 属性选择器 */
+
+        /* 存在选择器 */
+        div[name] {
+            color: red;
+        }
+
+        /* 相等选择器 */
+        div[name="name"] {
+            color: blue;
+        }
+        /* 包含选择器 */
+        div[name~="names"] {
+            color: green;
+        }
+        /* 连字符选择器 */
+        div[name|="na"] {
+            color: pink;
+        }
+        /* div[name|="na name"] {
+            color: pink;
+        } */
+
+    </style>
+</head>
+<body>
+    <div name="name">name</div>
+    <div se name>se</div>
+    <div name="names name">names</div>
+    <p name>p</p>
+    <div name="na-fasd">na</div>
+    <div name="na">na</div>
+    <div name="na name">na</div>
+    <div name="na names name">na</div>
+</body>
+</html>

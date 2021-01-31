@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: .3s all ease;
+        }
+
+        .box.red {
+            background-color: red;
+        }
+
+        .box.green {
+            background-color: green;
+        }
+
+        .box.red.active {
+            transform: scale(0.1);
+            /*缩放0.1*/
+        }
+    </style>
+</head>
+
+<body>
+    fasddf
+    <div class="box red"></div>
+    <script>
+        var box = document.getElementsByTagName('body');
+        // box[0].firstElementChild.setAttribute('class','box green');
+        // box[0].children[0].setAttribute('class','box green');
+        // box[0].firstChild.nextElementSibling.setAttribute('class','box green');
+
+        document.getElementsByClassName('box').forEach(function (o) {
+
+            o.innerHTML = '<h1>1</h1>';
+
+        });
+    </script>
+</body>
+
+</html>

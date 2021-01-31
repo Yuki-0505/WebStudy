@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 行内 -->
+    <a href="javasrcipt:;" onclick="alert(0)">onclick</a>
+    <!-- 内部 -->
+    <script type="text/javascript">
+        // alert(1);
+        // document.write(1);
+        console.log(1);
+        var a = 12; //全局
+        let a1=12;  //局部
+        const a2=12;    //不可变的
+
+        function test() {
+            var a=12;
+            var b=11;
+            document.write("b="+b+" a="+a+"<br>");
+
+            if(a>4) {
+                document.write("a>4");
+            }
+            // 等价于
+            (a>4)&&document.write("a>4");
+
+            // undefined派生自null;
+            var flag=undefined==null;
+            // 值为true
+
+            // NaN非数值
+            flag=NaN==NaN
+            // 值为false
+
+            flag=isNaN(1-'3');
+            // true
+
+            // 数字解析
+            // Number仅解析纯数字
+            Number('12');
+            // ParseInt可包含px
+            ParseInt('100px')+100;
+            ParseInt('12.56px')
+            // 12
+            ParseFloat('12.56px');
+            // 12.56
+            var s = ParseInt('0.56');
+
+            ParseInt('.56');
+            // NaN
+            ParseFloat('.56');
+            // 0.56
+
+            // null、undefined使用toString会报错
+
+            !0&&2
+            // 2;
+            1&&2
+            // 2
+            !0||2
+            // true
+            0||2
+            // 2
+            1||2
+            // 1
+
+            var str="json";
+            for(i in str) {
+                document.write(str[i]+"<br>");
+            }
+
+            document.write(eval('a=1,b=2,a+b'));
+
+            alert(1);
+            // 确认框
+            var res = confirm("确认信息");
+            console.log(res?'true':'false');
+            // 输入信息框
+            res = prompt("输入数据", "默认值");
+            console.log(res);
+
+            
+
+        }
+
+        function add(a,b) {
+            a=a||0;
+            b=b||0;
+            document.write(a+b);
+        }
+
+        add(1);
+
+        test();
+    </script>
+    <!-- 外部 -->
+    <script type="text/javascript" charset="utf-8" src="./js/study6-0.js"></script>
+</body>
+</html>

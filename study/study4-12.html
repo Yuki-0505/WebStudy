@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 定位 -->
+    <style>
+        * {
+            margin: 0;
+        }
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            margin: 100px;
+            position: relative;
+            /* position: absolute; */
+            left: 100px;
+        }
+        .box .inner-box div {
+            width: 100px;
+            height: 100px;
+        }
+        .box .inner-box div.elem1 {
+            background-color: red;
+
+            /* 正常static 相对relative 绝对absolute 固定fixed*/
+            /* 绝对定位会脱离文档流，以上级中使用定位的父级为坐标 */
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            /* position: relative; */
+        }
+        .box .inner-box div.elem2 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inner-box">
+            <div class="elem1"></div>
+            <h3>使用margin1</h3>
+        </div>
+        <div class="inner-box">
+            <div class="elem2"></div>
+            <h3>使用margin2</h3>
+        </div>
+    </div>
+</body>
+</html>

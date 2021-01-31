@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" class="box">box1</div>
+    <div class="box" name="box">box2</div>
+    <div class="box" name="box">box3</div>
+    <p class="box">p1</p>
+    <script>
+        var box=document.getElementById('box');
+        console.log(box);
+
+        box=document.getElementsByName('box');
+        console.log(box);
+
+        console.log(document.getElementsByTagName('p'));
+
+        console.log(document.getElementsByClassName('box'));
+        // 按选择器获取
+        console.log(document.querySelector('.box'));
+        console.log(document.querySelectorAll('div[name="box"]'));
+
+
+    </script>
+</body>
+</html>

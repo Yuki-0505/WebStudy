@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: red;
+        }
+        .box.box2{
+            display: none;
+        }
+        .box.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script scr="./js/jquery.min.js"></script>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <script>
+        // document.querySelector(".box.box1").onclick=function() {
+        //     var box2=document.querySelector(".box.box2");
+        //     if(box2.className=="box box2"){
+        //         box2.classList.add('active');
+        //     }else{
+        //         box2.classList.remove('active');
+        //     }
+        // }
+        document.querySelector(".box.box1").onmouseover=function() {
+            document.querySelector(".box.box2").classList.add('active');
+        }
+        document.querySelector(".box.box1").onmouseout=function() {
+            document.querySelector(".box.box2").classList.remove('active');
+        }
+        $('.box.box1').onmouseover=function() {
+            $('.box.box2').attr('class', 'active');
+            // $('.box.box2').remove('active');
+        }
+    </script>
+</body>
+</html>

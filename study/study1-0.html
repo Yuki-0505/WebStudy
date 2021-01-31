@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- div>div -->
+    <div>
+        <div></div>
+    </div>
+    <!-- (div>div)+div -->
+    <div>
+        <div></div>
+    </div>
+    <div></div>
+    <!-- (div{内容1}>div{内容2})+div{内容3} -->
+    <div>
+        内容1
+        <div>内容2</div>
+    </div>
+    <div>内容3</div>
+    <!-- (div.outer-box#outer-box>div.inner-box{inner-box})+div{兄弟节点} -->
+    <div class="outer-box" id="outer-box">
+        <div class="inner-box">inner-box</div>
+    </div>
+    <div>兄弟节点</div>
+    <!-- font[name="box"]{字体} -->
+    <font name="box">字体</font>
+
+    <!-- 1.div>div层级关系 -->
+    <!-- 2.div+div兄弟关系 -->
+    <!-- 3.div.box#box{内容}，class用点，id用#，标签内容用{} -->
+    <!-- 4.div[name='box'],标签属性用[] -->
+    <!-- div.box#box>div.box^div.box  ^上层关系 -->
+
+    <!-- h1+h2+h3+h4+h5+h6 -->
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+</body>
+
+</html>

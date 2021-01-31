@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 直接量方式
+        var str="Is this all there is\nis there?";
+        // 区分大小写
+        document.write(str.match(/is/)+"<br>");
+        // 忽略大小写
+        document.write(str.match(/is/i)+"<br>");
+        // 全局匹配
+        document.write(str.match(/is/g)+"<br>");
+        // 匹配开头，单行
+        document.write(str.match(/^is/)+"<br>");
+        // 匹配开头，多行
+        document.write(str.match(/^is/m )+"<br>");
+
+
+        str="this is the number p1231231";
+        document.write(str.match(/\d+/)+"<br>");
+        document.write(str.match(/\D*\s*/)+"<br>");
+
+        str="abc abcd abcf abcks";
+        document.write(str.match(/\w{4,5}/g)+"<br>");
+
+        // 正则器对象
+        str="this is true";
+        var pattern=new RegExp('is');
+        document.write(pattern.test(str)+"<br>");
+
+        var phoneNumber='手机号码：15634569876';
+        pattern=new RegExp('156[0-9]{8}');
+        // 重编译
+        pattern.compile('1[3|5|8]6[0-9]{8}');
+        document.write(pattern.test(phoneNumber)+"<br>");
+
+        str='The best things in my life';
+        pattern=new RegExp('e','gi');
+        while((res=pattern.exec(str))!=null){
+            document.write(res.index+"&nbsp");
+        }
+
+    </script>
+</body>
+</html>

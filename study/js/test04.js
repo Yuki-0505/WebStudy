@@ -1,0 +1,13 @@
+var flag;
+flag = Boolean(false);
+console.log(flag);
+flag = Boolean();
+console.log(flag);
+flag = Boolean("");
+console.log(flag);
+flag = Boolean(0);
+console.log(flag);
+flag = Boolean(null);
+console.log(flag);
+flag = Boolean(NaN);
+console.log(flag);

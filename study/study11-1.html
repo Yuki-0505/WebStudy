@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <div class="box">
+        <div class="inner-box">1</div>
+        <div class="inner-box"><span>2</span></div>
+        <div class="inner-box">3</div>
+        <div class="inner-box"></div>
+    </div>
+    <script>
+        console.log($('.box>.inner-box:first'));
+        console.log($('.box>.inner-box:last'));
+        // 奇数
+        console.log($('.box>.inner-box:odd'));
+        // 偶数
+        console.log($('.box>.inner-box:even'));
+        // 所有的h1-h6标签
+        console.log($(':header'));
+
+        console.log($('.box>.inner-box:eq(1)'));
+        // 选中内容2的标签
+        console.log($('.box>.inner-box:contains(2)'));
+        // 选中子标签含span
+        console.log($('.box>.inner-box:has(span)'));
+        // 选中内容为空
+        console.log($('.box>.inner-box:empty'));
+        // 选中有文本的
+        console.log($('.box>.inner-box:parent'));
+        // 选中隐藏
+        console.log($('.box>.inner-box:hidden'));
+        // 选中显示
+        console.log($('.box>.inner-box:visible'));
+
+        
+    </script>
+</body>
+</html>

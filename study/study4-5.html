@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 相邻兄弟选择，影响之后的一个内容 */
+        /* .content+p {
+            color: red;
+        } */
+        /* 普通兄弟选择器 影响之后的所有内容*/
+        .content~p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>内容1</p>
+    <p class="content">内容2</p>
+    <p>内容3</p>
+    <p>内容4</p>
+</body>
+</html>

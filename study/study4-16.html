@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form input:enabled {
+            background-color: red;
+        }
+        form input {
+            outline: none;
+        }
+        /* 聚焦 */
+        form input:focus {
+            border: 4px solid blue;
+        }
+        p {
+            word-wrap: break-word; /* 强制换行 */
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" readonly="" placeholder="readonly" /> <br/>
+        <input type="text" placeholder="readonly" /> <br/>
+        <input type="text" disabled="" placeholder="disabled" /> <br/>
+        <input type="radio" readonly="" name="s"  /> <br/>
+        <input type="radio" readonly="" placeholder="readonly" /> <br/>
+    </form>
+</body>
+</html>

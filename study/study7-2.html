@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="timer"></div>
+    <script type="text/javascript">
+        // 获取timer的DOM对象
+        var timer=document.querySelector(".timer");
+        // 获取时间对象
+        function times(){
+            var d=new Date();
+            var y=d.getFullYear();
+            var m=d.getMonth();
+            var dd=d.getDate();
+            var hh=d.getHours();
+            var min=d.getMinutes();
+            var ss=d.getSeconds();
+            var str=y+"年"+m+"月"+dd+"日"+hh+"时"+min+"分"+ss+"秒";
+            // document.write(str);
+            timer.innerHTML=str;
+        }
+        times();
+        setInterval(times, 1000);
+
+
+
+        // Math对象
+        function math(){
+            // 绝对值
+            Math.abs(-1);
+            // 1
+            // 天花板
+            Math.ceil(1.2);
+            // 2
+            // 地板
+            Math.floor(1.2);
+            // 1
+            // 四舍五入
+            Math.round(1.5);
+            // 1
+            Math.max(2,3);
+            // 3
+            Math.min(2,3);
+            // 2
+            // 次方
+            Math.pow(2,3);
+            // 8
+            // 开方
+            Math.sqrt(4);
+            // 2
+            // 随机数
+            Math.random();
+        }
+    </script>
+</body>
+</html>

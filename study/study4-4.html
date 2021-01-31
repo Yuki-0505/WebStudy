@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器，空格表示，包括儿子、孙子*/
+        .box div {
+            color: red;
+        }
+        /* 子代选择器 */
+        .box > div {
+            color: blue;
+        }
+
+        .content > li {
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inner-box1">
+            content
+            <div class="inner-box2">内容</div>
+        </div>
+    </div>
+
+    <ul  class="content">
+        <li>
+            <ul>
+                <li><a href="javascrapt:;">1</a></li>
+                <li><a href="javascrapt:;">2</a></li>
+                <li><a href="javascrapt:;">3</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li><a href="javascrapt:;">1</a></li>
+                <li><a href="javascrapt:;">2</a></li>
+                <li><a href="javascrapt:;">3</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li><a href="javascrapt:;">1</a></li>
+                <li><a href="javascrapt:;">2</a></li>
+                <li><a href="javascrapt:;">3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

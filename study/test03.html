@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+  <frameset rows="1*,2*,1*">
+    <frame src="" />
+    <frameset cols="80,*">
+      <iframe src="./list.html" name="list" ></iframe>
+      <iframe name="targetFrame" ></iframe>
+    </frameset>
+    <frame src="" />
+  </frameset>
+<body>
+  <script src="./js/jquery.min.js" ></script>
+  <script>
+    console.log("-----------");
+    var list = $(parent.frames['list']).document;
+    console.log(list);
+  </script>
+</body>
+
+</html>

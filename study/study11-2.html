@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <div class="box red">box</div>
+    <script>
+        // js
+        setInterval(function () {
+            var box = document.querySelector('.box');
+            box.setAttribute('class', 'box green');
+        }, 1000);
+        setInterval(function () {
+            var box = document.querySelector('.box');
+            box.classList.remove("red");
+            box.classList.add("green")
+        }, 1000);
+        // jquery
+        setInterval(function () {
+            var box = $('.box');
+            box.attr('class', 'box green');
+        }, 1000);
+        setInterval(function () {
+            var box = $('.box');
+            box.attr('class', 'box red');
+        }, 2000);
+    </script>
+</body>
+
+</html>
